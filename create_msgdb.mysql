@@ -1,0 +1,5 @@
+create schema msgdb default character set utf8 collate utf8_general_ci;
+use msgdb
+create table messages (id int not null auto_increment, author text, content text, ts timestamp default current_timestamp, primary key(id));
+insert into messages (author,content) values ('Anonymous', 'Hello, cruel world!');
+select * from messages;
