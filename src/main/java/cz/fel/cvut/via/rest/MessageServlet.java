@@ -58,7 +58,7 @@ public class MessageServlet
         {
             id = Integer.parseInt(headers.get("X-Last-Received").get(0)) ;
         }
-       
+
         if (headers.containsKey("X-Limit"))
         {
             limit = Integer.parseInt(headers.get("X-Limit").get(0)) ;
