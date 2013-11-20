@@ -27,7 +27,7 @@ import javax.ws.rs.core.UriInfo;
 /**
  * The message resource.
  */
-@Path("/messages")
+@Path("messages")
 public class MessageServlet
 {
     private static DataSource dataSource;
@@ -46,7 +46,6 @@ public class MessageServlet
     }
 
     @GET
-    @Path("/")
     @Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
     public List<Message> getMessages(@javax.ws.rs.core.Context HttpHeaders requestHeaders) throws SQLException
     {
@@ -127,7 +126,7 @@ public class MessageServlet
     }
     
     @GET
-    @Path("/{messageId}")
+    @Path("{messageId}")
     @Consumes({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
     @Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
     public Response getMessage(@PathParam("messageId") Integer messageId) throws SQLException
@@ -183,7 +182,7 @@ public class MessageServlet
     }
 
     @GET
-    @Path("/author/{author}")
+    @Path("author/{author}")
     @Consumes({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
     @Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
     public List<Message> getMessagesByAuthor(@PathParam("author") String author) throws SQLException
@@ -244,7 +243,6 @@ public class MessageServlet
     }
 
     @POST
-    @Path("/")
     @Consumes({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
     @Produces(MediaType.TEXT_PLAIN)
     public Response storeMessage(Message message, @javax.ws.rs.core.Context UriInfo uriInfo) throws SQLException

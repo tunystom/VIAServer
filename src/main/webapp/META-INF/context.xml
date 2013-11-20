@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Context>
+  <Resource 
+      name="jdbc/msgdb" 
+      auth="Container" 
+      type="javax.sql.DataSource"
+      driverClassName="org.postgresql.Driver"
+      factory="org.apache.commons.dbcp.BasicDataSourceFactory"
+      username="kasparek"
+      password="sIs=atilt#63"
+      url="jdbc:postgresql://localhost:5432/msgdb?useEncoding=true&amp;characterEncoding=UTF-8"
+      maxActive="100" 
+      maxIdle="30" 
+      maxWait="1000"
+  />
+</Context>

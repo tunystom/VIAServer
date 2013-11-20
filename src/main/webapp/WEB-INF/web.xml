@@ -29,15 +29,15 @@
     <load-on-startup>1</load-on-startup>
   </servlet>
   
-  <servlet>
-    <servlet-name>ShowMessagesServlet</servlet-name>
-    <servlet-class>cz.fel.cvut.via.ShowMessagesServlet</servlet-class>
-  </servlet>
-
   <servlet-mapping>
     <servlet-name>JerseyServletContainer</servlet-name>
     <url-pattern>/rest/*</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ShowMessagesServlet</servlet-name>
+    <servlet-class>cz.fel.cvut.via.ShowMessagesServlet</servlet-class>
+  </servlet>
   
   <servlet-mapping>
     <servlet-name>ShowMessagesServlet</servlet-name>

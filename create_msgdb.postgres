@@ -1,0 +1,14 @@
+/*
+ * Run the script under the user 'kasparek' as follows:
+ *
+ *    psql -U kasparek -h localhost -f create_msgdb.postgres
+ *
+ * but to be able to do so, first create 'kasparek' database
+ * with the owner set to 'kasparek':
+ *
+ *    sudo -u postgres createdb -O kasparek kasparek
+ */
+CREATE DATABASE msgdb;
+\c msgdb;
+CREATE TABLE messages (id SERIAL, author TEXT, content TEXT, ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP, PRIMARY KEY(id));
+INSERT INTO messages (author, content) values ('Anonymous', 'Hello, cruel world!');
