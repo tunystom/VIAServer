@@ -1,12 +1,12 @@
 /*
- * Run the script under the user 'kasparek' as follows:
+ * Run the script under the user 'viadbuser' as follows:
  *
- *    psql -U kasparek -h localhost -f create_msgdb.postgres
+ *    psql -U viadbuser -h localhost -f create_msgdb.postgres
  *
- * but to be able to do so, first create 'kasparek' database
- * with the owner set to 'kasparek':
+ * but to be able to do so, first create 'viadbuser' database
+ * with the owner set to 'viadbuser':
  *
- *    sudo -u postgres createdb -O kasparek kasparek
+ *    sudo -u postgres createdb -O viadbuser viadbuser
  */
 CREATE DATABASE msgdb;
 \c msgdb;
